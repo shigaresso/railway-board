@@ -8,10 +8,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1 className='header'>掲示板</h1>
+        <a className='header' href=''>スレッドをたてる</a>
+      </header>
+
+      <main>
         <div>
           {threads.map(thread => <Thread key={thread.id} title={thread.title} />)}
         </div>
-      </header>
+      </main>
+
     </div>
   );
 };

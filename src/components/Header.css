@@ -1,0 +1,12 @@
+.app-header {
+    background-color: #4bdf89;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .header-content {
+    padding: 0px 30px;
+  }
