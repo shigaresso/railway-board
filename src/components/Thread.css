@@ -2,4 +2,6 @@
   background: white;
   color: black;
   border-radius: 5px;
+  text-align: start;
+  padding: 0px 10px;
 }
