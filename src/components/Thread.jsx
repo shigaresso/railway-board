@@ -2,8 +2,8 @@ import './Thread.css'
 
 export const Thread = (props) => {
   return (
-    <section className="card">
+    <div className="card">
       <h1>{props.title}</h1>
-    </section>
-  )
-}
+    </div>
+  );
+};

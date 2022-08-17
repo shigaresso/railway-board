@@ -1,14 +1,17 @@
 import { Thread } from "./Thread"
 import { useFetchApi } from "../hooks/useFetchApi";
+import './Main.css';
 
 export const Main = () => {
   const threads = useFetchApi();
 
   return (
     <main>
-      <h1>新着スレッド</h1>
-      <div className="threads">
-        {threads.map(thread => <Thread key={thread.id} title={thread.title} />)}
+      <div className="main-container">
+        <h1 className="new-thread">新着スレッド</h1>
+        <div className="threads">
+          {threads.map(thread => <Thread key={thread.id} title={thread.title} />)}
+        </div>
       </div>
     </main>
   );
