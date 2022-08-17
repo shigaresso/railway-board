@@ -6,7 +6,8 @@ export const Main = () => {
 
   return (
     <main>
-      <div>
+      <h1>新着スレッド</h1>
+      <div className="threads">
         {threads.map(thread => <Thread key={thread.id} title={thread.title} />)}
       </div>
     </main>
