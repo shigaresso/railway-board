@@ -3,7 +3,8 @@
 }
 
 .new-thread {
-    position: relative; left: -170px;
+    position: relative;
+    left: -170px;
 }
 
 .threads {

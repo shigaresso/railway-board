@@ -1,8 +1,9 @@
-import { Thread } from "./Thread"
-import { useFetchApi } from "../hooks/useFetchApi";
-import './Main.css';
+import { Thread } from "../Thread/Thread"
+import { useFetchApi } from "../../hooks/useFetchApi";
+import './Home.css';
 
-export const Main = () => {
+export const Home = () => {
+  // alert はこちら側で呼ぶようにする
   const threads = useFetchApi('https://railway-react-bulletin-board.herokuapp.com/threads');
 
   return (
