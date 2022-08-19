@@ -1,14 +1,11 @@
+import axios from "axios";
 import { useEffect, useState } from "react"
 
-export const useFetchApi = () => {
+export const useFetchApi = (url) => {
   const [threads, setThreads] = useState([]);
 
   useEffect(() => {
-    fetch('https://railway-react-bulletin-board.herokuapp.com/threads', { method: 'GET' })
-      .then(res => {
-        if (!res.ok) throw new Error(res.status);
-        return res.json();
-      })
+    fetchThreadDatas(url)
       .then(data => {
         setThreads(data);
       })
@@ -20,6 +17,20 @@ export const useFetchApi = () => {
 
   return threads;
 };
+
+export const fetchThreadDatas = (url) => {
+  const result = axios.get(url)
+    .then(response => {
+      return response.data
+    }).catch(error => {
+      switch (error.response.status) {
+        case 404:
+          console.log(`Error: ${error.response.status}`);
+          throw new Error(error.response.status);
+      }
+    });
+  return result;
+}
 
 // await を用いてみたが、useEffect の内部で非同期を扱うとかえって読みにくいのでやめた。
 

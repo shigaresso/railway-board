@@ -3,7 +3,7 @@ import { useFetchApi } from "../hooks/useFetchApi";
 import './Main.css';
 
 export const Main = () => {
-  const threads = useFetchApi();
+  const threads = useFetchApi('https://railway-react-bulletin-board.herokuapp.com/threads');
 
   return (
     <main>
