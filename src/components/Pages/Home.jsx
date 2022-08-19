@@ -10,7 +10,7 @@ export const Home = () => {
     <div className="main-container">
       <h1 className="new-thread">新着スレッド</h1>
       <div className="threads">
-        {threads.map(thread => <Thread key={thread.id} title={thread.title} />)}
+        {threads.map(thread => <Thread key={thread.id} id={thread.id} title={thread.title} />)}
       </div>
     </div>
   );
