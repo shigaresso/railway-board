@@ -1,7 +1,8 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchThreadDatas, useFetchApi } from "../../hooks/useFetchApi";
-import { Thread } from "../Thread/Thread";
+import { fetchThreadDatas } from "../../hooks/useFetchApi";
+import { Res } from "../Res/Res";
+import { ResSendForm } from "../ResSendForm";
 import "./ThreadContent.css"
 
 export const ThreadContent = () => {
@@ -23,12 +24,18 @@ export const ThreadContent = () => {
   }, []);
 
   return (
-    <div className="main-container">
-      <h1 className="thread-name">{threads.title}</h1>
-      <div className="threads">
-        {/* posts を posts? としないとサーバーからデータを受け取る前に map を実行してしまいエラーになる */}
-        {threads.posts?.map(thread => <Thread key={thread.id} title={thread.post} />)}
+    <main className="container">
+      <div className="main-container">
+        <h1 className="thread-name">{threads.title}</h1>
+        <div className="threads">
+          {/* posts を posts? としないとサーバーからデータを受け取る前に map を実行してしまいエラーになる */}
+          {threads.posts?.map(res => <Res key={res.id} content={res.post} />)}
+        </div>
       </div>
-    </div>
+      
+      <div className="res-container">
+        <ResSendForm />
+      </div>
+    </main>
   );
 };
