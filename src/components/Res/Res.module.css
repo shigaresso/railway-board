@@ -8,4 +8,5 @@
   margin-bottom: 30px;
   font-size: 1.5em;
   overflow-wrap: break-word;
+  box-sizing: border-box;
 }
