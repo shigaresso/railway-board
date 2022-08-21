@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "./ResSendForm.css"
+import resSendForm from "./ResSendForm.module.css"
 
 export const ResSendForm = (props) => {
   const postUrl = `https://railway-react-bulletin-board.herokuapp.com/threads/${props.threadid}/posts`;
@@ -17,12 +17,10 @@ export const ResSendForm = (props) => {
   }
 
   return (
-    <div className='create-new-thread'>
+    <div className={resSendForm.create_new_thread}>
       <form onSubmit={() => window.location.reload()}>
-        <input className='res-content' type="text" value={resContent} onChange={(event) => { setResContent(event.target.value) }} placeholder="スレッドタイトル" />
-        <div className='form-bottom'>
-          <button onClick={async () => await sendRes(postUrl, resContent)}>作成</button>
-        </div>
+        <input className={resSendForm.res_content} type="text" value={resContent} onChange={(event) => { setResContent(event.target.value) }} placeholder="スレッドタイトル" />
+        <button className={resSendForm.form_button} onClick={async () => await sendRes(postUrl, resContent)}>投稿</button>
       </form>
     </div>
   );

@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  margin: 0px 40px;
+}
+
+.main_container {
+  max-width: 600px;
+  margin: 0px 100px 0px auto;
+}
+
+.thread_name {
+  padding: 20px 60px;
+  overflow-wrap: break-word;
+  position: relative;
+  left: 0px;
+}
+
+.res_container {
+  margin: 0px auto;
+}
