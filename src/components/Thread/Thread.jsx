@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import './Thread.css'
+import thread from './Thread.module.css'
 
 export const Thread = (props) => {
   const navigate = useNavigate();
@@ -9,8 +9,8 @@ export const Thread = (props) => {
   }
 
   return (
-    <div className="card">
-      <h1 onClick={() => linkThread()}>{props.title}</h1>
+    <div className={thread.card} onClick={() => linkThread()}>
+      {props.title}
     </div>
   );
 };
