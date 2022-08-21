@@ -18,3 +18,13 @@
 .res_container {
   margin: 0px auto;
 }
+
+.change_page {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button:disabled {
+  background-color: #808080;
+}
