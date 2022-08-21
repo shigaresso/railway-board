@@ -26,7 +26,6 @@ export const CreateThread = () => {
     <div className={createThread.create_new_thread}>
       <p>スレッド新規作成</p>
       <form onSubmit={() => navigate('/')}>
-        {/* パディングが必要 */}
         <input className={createThread.thread_title} type="text" name='thread' value={threadName} onChange={(event) => { setThreadName(event.target.value) }} placeholder="スレッドタイトル" />
         <div className={createThread.form_bottom}>
           <Link to="/" >Topに戻る</Link>
