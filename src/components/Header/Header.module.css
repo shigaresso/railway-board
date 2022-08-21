@@ -1,4 +1,4 @@
-.app-header {
+.app_header {
   background-color: #4bdf89;
   height: 10vh;
   display: flex;
@@ -7,6 +7,6 @@
   color: white;
 }
 
-.header-content {
+.header_content {
   padding: 0px 30px;
 }
