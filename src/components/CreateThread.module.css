@@ -1,4 +1,4 @@
-.create-new-thread {
+.create_new_thread {
   width: 300px;
   margin: 50px auto;
 }
@@ -8,7 +8,7 @@ p {
   font-weight: 550;
 }
 
-.thread-title {
+.thread_title {
   width: 300px;
   padding: 15px 0px;
   margin: 40px auto;
@@ -18,12 +18,12 @@ p {
   box-sizing: border-box;
 }
 
-.form-bottom {
+.form_bottom {
   display: flex;
   justify-content: space-between;
 }
 
-.form-bottom, Link {
+.form_bottom, Link {
   margin: 0px 0px 0px 15px;
 }
 
