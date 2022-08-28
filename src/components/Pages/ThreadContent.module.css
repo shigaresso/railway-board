@@ -1,27 +1,36 @@
 .container {
   display: flex;
-  margin: 0px 40px;
+  flex-direction: column;
 }
 
 .main_container {
-  max-width: 600px;
-  margin: 0px 100px 0px auto;
+  margin: 0px auto;
 }
 
 .thread_name {
-  padding: 20px 60px;
+  padding: 20px 70px;
   overflow-wrap: break-word;
-  position: relative;
-  left: 0px;
 }
 
-.res_container {
+.wrapper {
+  width: 100%;
+  display: flex;
+  margin-right: 100px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.message_container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
   margin: 0px auto;
 }
 
 .change_page {
   margin-bottom: 20px;
   display: flex;
+  max-width: 100%;
   justify-content: space-between;
 }
 

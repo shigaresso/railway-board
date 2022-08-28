@@ -1,19 +1,24 @@
-import { Thread } from "../Thread/Thread"
+import { ThreadBox } from "../atoms/ThreadBox/ThreadBox";
 import { useFetchApi } from "../../hooks/useFetchApi";
 import home from './Home.module.css';
+import { Header } from "../Header/Header";
+import { PageNameText } from "../atoms/PageNameText/PageNameText";
 
 export const Home = () => {
   // alert はこちら側で呼ぶようにする
   const threads = useFetchApi('https://railway-react-bulletin-board.herokuapp.com/threads');
 
   return (
-    <div className={home.home_container}>
-      <div className={home.home_container}>
-        <h1 className={home.new_thread}>新着スレッド</h1>
-        <div>
-          {threads.map(thread => <Thread key={thread.id} id={thread.id} title={thread.title} />)}
+    <>
+      <Header />
+      <main className={home.home_container}>
+        <div className={home.body}>
+          <PageNameText className={home.new_thread} text="新着スレッド" />
+          <div>
+            {threads.map(thread => <ThreadBox key={thread.id} id={thread.id} title={thread.title} />)}
+          </div>
         </div>
-      </div>
-    </div>
+      </main>
+    </>
   );
 };
