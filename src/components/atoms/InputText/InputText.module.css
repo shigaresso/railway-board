@@ -1,0 +1,9 @@
+.input_text {
+  width: 300px;
+  padding: 15px 0px;
+  margin: 40px auto;
+  font-size: 1.25em;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
